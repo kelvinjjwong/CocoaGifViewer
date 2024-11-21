@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8EEAF6E12CEF4C8B0007D3A9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8EEAF6E02CEF4C830007D3A9 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8EEAF6B02CEF493B0007D3A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,22 +31,13 @@
 		8EEAF69E2CEF493A0007D3A9 /* CocoaGifViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaGifViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEAF6AF2CEF493B0007D3A9 /* CocoaGifViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaGifViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEAF6B92CEF493B0007D3A9 /* CocoaGifViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaGifViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EEAF6E02CEF4C830007D3A9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8EEAF6A02CEF493A0007D3A9 /* CocoaGifViewer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CocoaGifViewer;
-			sourceTree = "<group>";
-		};
-		8EEAF6B22CEF493B0007D3A9 /* CocoaGifViewerTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CocoaGifViewerTests;
-			sourceTree = "<group>";
-		};
-		8EEAF6BC2CEF493B0007D3A9 /* CocoaGifViewerUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CocoaGifViewerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +70,8 @@
 		8EEAF6952CEF493A0007D3A9 = {
 			isa = PBXGroup;
 			children = (
+				8EEAF6E02CEF4C830007D3A9 /* README.md */,
 				8EEAF6A02CEF493A0007D3A9 /* CocoaGifViewer */,
-				8EEAF6B22CEF493B0007D3A9 /* CocoaGifViewerTests */,
-				8EEAF6BC2CEF493B0007D3A9 /* CocoaGifViewerUITests */,
 				8EEAF69F2CEF493A0007D3A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +124,6 @@
 			dependencies = (
 				8EEAF6B12CEF493B0007D3A9 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				8EEAF6B22CEF493B0007D3A9 /* CocoaGifViewerTests */,
-			);
 			name = CocoaGifViewerTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +143,6 @@
 			);
 			dependencies = (
 				8EEAF6BB2CEF493B0007D3A9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8EEAF6BC2CEF493B0007D3A9 /* CocoaGifViewerUITests */,
 			);
 			name = CocoaGifViewerUITests;
 			packageProductDependencies = (
@@ -212,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EEAF6E12CEF4C8B0007D3A9 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

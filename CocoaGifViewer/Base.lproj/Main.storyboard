@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CocoaGifViewer" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,11 +704,39 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CocoaGifViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AFV-h1-nfq">
+                                <rect key="frame" x="0.0" y="30" width="480" height="240"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bhe-Yo-OV1"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="djl-Iu-b3L">
+                                <rect key="frame" x="209" y="-7" width="63" height="40"/>
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="z2K-rC-vck">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onNextClicked:" target="XfG-lQ-9wD" id="57o-o6-qos"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="djl-Iu-b3L" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="1s8-Pj-Wfq"/>
+                            <constraint firstItem="djl-Iu-b3L" firstAttribute="top" secondItem="AFV-h1-nfq" secondAttribute="bottom" constant="2" id="5u3-2B-eu0"/>
+                            <constraint firstAttribute="bottom" secondItem="djl-Iu-b3L" secondAttribute="bottom" id="Hzq-od-p1X"/>
+                            <constraint firstAttribute="bottom" secondItem="AFV-h1-nfq" secondAttribute="bottom" constant="30" id="Ugb-C9-2Vh"/>
+                            <constraint firstAttribute="trailing" secondItem="AFV-h1-nfq" secondAttribute="trailing" id="Y8L-5t-qcO"/>
+                            <constraint firstItem="AFV-h1-nfq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="bQe-Io-iUS"/>
+                            <constraint firstItem="AFV-h1-nfq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="rxz-ce-RD9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gifImageView" destination="AFV-h1-nfq" id="jJf-fR-BUN"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
